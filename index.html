@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-section" class="card">
+        <h2>Voter Login</h2>
+        <input type="text" id="voter-id" placeholder="Enter Voter ID">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button id="login-btn">Login</button>
+        <p id="login-error" class="error-message"></p>
+    </div>
+
+    <div id="vote-section" class="card" style="display: none;">
+        <h2>Cast Your Vote</h2>
+        <select id="candidates-list">
+            <option value="">Select a Candidate</option>
+        </select>
+        <button id="vote-btn">Vote</button>
+        <p id="vote-confirmation"></p>
+        <button id="logout-btn">Logout</button>
+    </div>
+
+    <div id="results-section" class="card" style="display: none;">
+        <h2>Results</h2>
+        <div id="results-list">
+            <p>No votes cast yet.</p>
+        </div>
+        <button id="view-vote-percentage-btn">View Voting Percentage</button>
+        <div id="voting-percentage" style="display: none;">
+            <canvas id="vote-chart"></canvas>
+        </div>
+        <button id="back-btn">Back to Voting</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
